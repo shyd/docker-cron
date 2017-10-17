@@ -9,4 +9,4 @@ RUN mkdir /data
 
 WORKDIR /data
 
-CMD cron -f
+CMD ["cron", "-f"]
