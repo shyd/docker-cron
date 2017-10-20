@@ -5,8 +5,11 @@ RUN apt-get update && \
 
 RUN rm -rf /var/lib/apt/lists/*
 
+ADD startup.sh /startup.sh
+RUN chmod +x /startup.sh
+
 RUN mkdir /data
 
 WORKDIR /data
 
-CMD ["cron", "-f"]
+CMD /startup.sh
