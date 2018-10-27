@@ -1,7 +1,7 @@
 FROM debian:latest
 
 RUN apt-get update && \
-    apt-get -y install wget curl rsync openssh-client zip mysql-client cron
+    apt-get -y install wget curl rsync openssh-client zip mysql-client cron php-cli
 
 RUN rm -rf /var/lib/apt/lists/*
 
