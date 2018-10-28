@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM php:7.0-cli
 
 RUN apt-get update && \
     apt-get -y install wget curl rsync openssh-client zip mysql-client cron
