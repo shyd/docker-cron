@@ -45,7 +45,7 @@ If you want to trigger ownClouds cron with system cron use the tag `owncloud` li
 Then create a cronjob `/oc_cron/cronjobs/oc`:
 
 ```
-*/15 * * * * root . /project_env.sh; root su www-data -c '/usr/local/bin/php -f /var/www/html/cron.php; echo "fired"' -s "/bin/bash" > /proc/1/fd/1 2>/proc/1/fd/2
+*/15 * * * * root su www-data -c '/usr/local/bin/php -f /var/www/html/cron.php; echo "fired"' -s "/bin/bash" > /proc/1/fd/1 2>/proc/1/fd/2
 ```
 
 to run the cron every 15 minutes.
